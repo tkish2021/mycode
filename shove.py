@@ -5,7 +5,7 @@ print("What is the reason for your update")
 reason = input()
 
 pre = 'git status'
-cmd = 'cd ~/mycode;git add *;git commit -m "print(reason)";git push origin;'
+cmd = 'cd ~/mycode;git add *;git commit -m "print(reason)";git push origin main;'
 post = 'git status'
 
 #os commands for system. Take variables from commands pre cmd and post
