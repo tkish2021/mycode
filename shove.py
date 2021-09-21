@@ -8,7 +8,8 @@ pre = 'git status'
 #cmd = 'cd ~/mycode;git add *;git commit -m "print(reason)";git push origin main;'
 #cmd = 'cd ~/mycode;git add *;git commit -m "+ reason";git push origin main;'
 #cmd = 'cd ~/mycode;git add *;git commit -m "{0.reason}";git push origin main;'
-cmd = 'cd ~/mycode;git add *;git commit -m "+ reason +";git push origin main;'
+#cmd = 'cd ~/mycode;git add *;git commit -m "+ reason +";git push origin main;'
+cmd = 'cd ~/mycode;git add *;git commit -m "' + reason + '";git push origin main;'
 post = 'git status'
 
 #os commands for system. Take variables from commands pre cmd and post
