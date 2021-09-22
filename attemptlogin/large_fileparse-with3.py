@@ -29,7 +29,14 @@ with open("/home/student/mycode/attemptlogin/keystone.common.wsgi") as kfile:
    # loop over the file
     for line in kfile:
         if "from 1" in line:
-            #print(line)
             ips = line.split("from")
-            print("IP attempts:", ips[1])
+            expanded = line.split(" - - - - -]")
+            uuid = line.split("[req-")
+            uuida = uuid[1].split(" - -")
+#            cleaned = expanded.rstrip()
+            #print("Attempt:", expanded[1])
+            #print("Attempt:", uuid[0])
+            print("UUID:", uuida[0])
+#            print("Attempt:", cleaned)
+            print("IP Attempts:", ips[1])
 
