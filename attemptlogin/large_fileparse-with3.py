@@ -28,7 +28,8 @@ with open("/home/student/mycode/attemptlogin/keystone.common.wsgi") as kfile:
 
    # loop over the file
     for line in kfile:
-        if "from 1" in line:
+        #if "from 1" in line:
+        if "from "  in line:
             ips = line.split("from")
             expanded = line.split(" - - - - -]")
             uuid = line.split("[req-")
