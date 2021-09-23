@@ -1,4 +1,4 @@
-
+#!/usr/bin/env python3
 import crayons
 
 # print 'red string' in red
