@@ -34,6 +34,8 @@ while True: #Sets up an infinite loop
         break
     elif selection == 5:
         print( "Anything else you find interesting!" )
+        print( "Mandlebrots!" )
+        os.system("./mandlebrot.py")
         break
     elif selection == 6: 
         print( "Quitting")

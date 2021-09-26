@@ -12,7 +12,7 @@ def main():
 # print question
     print("How Many Bananas in the basket")
 # pause and collect input (wait for ENTER)
-    BANANAS = int(input() )
+    BANANAS = int(input() ) #Also note we only accept integers
 
     print("How Many Apples in the basket")
 # pause and collect input (wait for ENTER)
@@ -30,7 +30,7 @@ def main():
     numfruits = [ BANANAS , APPLES , ORANGES , PINNAPLES ]
     
     y_pos = np.arange(len(fruits)) #Sets auto number scaling based on user number inputs for axes Y
-    #x_pos = np.arange(len(fruits))
+    #x_pos = np.arange(len(numfruits))
 
     plt.bar(y_pos, numfruits, align='center', alpha=0.5) #Sets Y position for Each Fruit
     #plt.bar(x_pos, fruits, color=['yellow', 'red', 'orange', 'brown'])
@@ -39,8 +39,8 @@ def main():
     plt.title('How many Fruit in the basket') #Title for the Graph
 
     plt.show() #Displays the Graph
-    plt.savefig("/home/student/alta3research-python-cert/Fruit.png")  #This just saves the graph file
-    print("The graph is located /home/student/alta3research-python-cert/Fruit.png")
+    plt.savefig("/home/student/mycode/alta3research-python-cert/Fruit.png")  #This just saves the graph file
+    print("The graph is located /home/student/mycode/alta3research-python-cert/Fruit.png")
     #This just prints out the location for the user to get the graph
 
     plt.savefig("/home/student/static/Fruit.png") #This saves an additional copy so we can view it on lab server in static
@@ -50,4 +50,3 @@ def main():
     
 if __name__ == "__main__":
     main()
-
