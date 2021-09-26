@@ -32,18 +32,11 @@ def main():
 
     # create resp, which is our request object
     resp = requests.get(f"{API}")  # This "f" string reads: API 
-#resp is a dump out of the exoplanetarchive but it is all within 1 line in a dataset
-#Now we want to break that 1 line json into lines for each kepid entry.
     #print( dir(resp) ) ##Print the methods available
-####    for kepids in resp:
-#    for kepids in resp.items():
-#        print(kepids, end='\n')
-##         print(kepids) 
-##        kepids = str(kepids)
-##        rows = json.loads(print(f"{kepids}") )
-####        print({kepids})
     print('Kepler Data from API for Candidate exoplanets\n')
     print("_______________________________________\n")
+#Now we want to break that 1 line json into lines for each kepid entry.
+#print( dir(resp) ) ##Print the methods available
 
     for kepids in resp:
 #        print(kepids , end='\n')
@@ -52,15 +45,6 @@ def main():
 ####        print(kepids) #removes /n from end of lines 
         print(str(kepids.decode("utf-8")), end='\n' ) #removes end=/n from end of lines #The decode is to remove a encoded b' in the beginning of the line formatting from the API. I had to add decoding for utf-8 to remove it to read correctly. reference https://stackoverflow.com/questions/64388725/how-to-remove-b-from-the-beginning-of-each-line-of-string-read-from-file
 #Had to also force the print to string type
-        print("_______________________________________\n")
-#    for kepids in resp :
-#        print(str(kepids))
-
-#        print(kepids)
-#        print(kepids[kepid])
-        #print(b("kepid","kepoi_name","kepler_name","koi_disposition","koi_pdisposition"), end=":\n") 
-
 
 if __name__ == "__main__":
     main()
-
