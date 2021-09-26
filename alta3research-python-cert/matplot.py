@@ -1,8 +1,11 @@
 #!/usr/bin/env python3
 ##python3 -m pip install matplotlib==3.0.3 ##Install matplotlib
 ##python3 -m pip install numpy ## Install numpy
-import matplotlib.pyplot as plt
+#import matplotlib.pyplot as plt
+#import numpy as np
+import matplotlib.pyplot as plt; plt.rcdefaults()
 import numpy as np
+import matplotlib.pyplot as plt
 
 def main():
     """Run time code"""
@@ -23,23 +26,16 @@ def main():
 # pause and collect input (wait for ENTER)
     PINNAPLES = int(input() )
 
-    fig = plt.figure()
+    fruits = ('Bananas', 'Apples', 'Oranges', 'Pinnaples')
+    y_pos = np.arange(len(fruits))
+    numfruits = [ BANANAS , APPLES , ORANGES , PINNAPLES ]
 
-    #ax.set_yticks(np.arange(0, 10, 1))
-    
-    Fruits = ['Bananas', 'Apples', 'Oranges', 'Pinnaples']
-    Numfruits = [ BANANAS , APPLES , ORANGES , PINNAPLES ]
-
-    ax = fig.add_axes([0,0,1,1])    
-    ax.set_title('Fruit in a Basket')
-    ax.set_ylabel('Fruit Count')
-    ax.bar(Fruits,Numfruits)
-
-    print(Fruits)
-    print(Numfruits)
+    plt.bar(y_pos, numfruits, align='center', alpha=0.5)
+    plt.xticks(y_pos, fruits)
+    plt.ylabel('Number of Fruit')
+    plt.title('How many Fruit in the basket')
 
     plt.show()
-
     # plt.show() # you can try this on a Python IDE with a GUI if you'd like
     plt.savefig("/home/student/alta3research-python-cert/Fruit.png")
     print("The graph is located /home/student/alta3research-python-cert/Fruit.png")
