@@ -8,7 +8,7 @@ while True: #Sets up an infinite loop
     print("4. Pandas to create a dataframe" )
     print("5. Anything else you find interesting!" )
     print("6. Quit." )
-    print("\n Make a Selection:")
+    print("\n Make a Number Selection:")
 
     selection=int(input() )  #force input as integer for comparitor. Get user input
     if selection == 1: 
