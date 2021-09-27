@@ -39,8 +39,10 @@ def main():
     plt.title('How many Fruit in the basket') #Title for the Graph
 
     plt.show() #Displays the Graph
-    plt.savefig("/home/student/mycode/alta3research-python-cert/Fruit.png")  #This just saves the graph file
-    print("The graph is located /home/student/mycode/alta3research-python-cert/Fruit.png")
+    #plt.savefig("/home/student/mycode/alta3research-python-cert/Fruit.png")  #This just saves the graph file
+    plt.savefig("./Fruit.png")  #This just saves the graph file
+    #print("The graph is located /home/student/mycode/alta3research-python-cert/Fruit.png")
+    print("The graph is located ./Fruit.png")
     #This just prints out the location for the user to get the graph
 
     plt.savefig("/home/student/static/Fruit.png") #This saves an additional copy so we can view it on lab server in static

@@ -35,8 +35,10 @@ plt.imshow(img, cmap="plasma")
 plt.axis("off")
 
 plt.show() #Displays the Graph
-plt.savefig("/home/student/mycode/alta3research-python-cert/Mandle.png")  #This just saves the graph file
-print("The graph is located /home/student/mycode/alta3research-python-cert/Mandle.png")
+#plt.savefig("/home/student/mycode/alta3research-python-cert/Mandle.png")  #This just saves the graph file
+plt.savefig("./Mandle.png")  #This just saves the graph file
+#print("The graph is located /home/student/mycode/alta3research-python-cert/Mandle.png")
+print("The graph is located ./Mandle.png")
     #This just prints out the location for the user to get the graph
 
 plt.savefig("/home/student/static/Mandle.png") #This saves an additional copy so we can view it on lab server in static
